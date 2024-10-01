@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen-Project-People</title>
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: cornflowerblue;
+        }
+
+        .thumbnail {
+        padding: 10px 10px 30px 10px;
+        border: 4px solid black;
+        }
+
+        .thumbnail:hover {
+            border: 4px solid orange;
+            border-radius: 10px;
+        }
+
+        dialog img {
+        width: 100%;
+        }
+    </style>
+    <script>
+        // Get Stuff
+        const thumbnail = document.querySelector('.thumbnail');
+        const dialog = document.querySelector('dialog');
+
+        // Do Stuff
+        thumbnail.addEventListener( 'click' , () => {
+
+        dialog.showModal();
+        
+        });
+
+        dialog.addEventListener( 'click' , () => {
+
+        dialog.close();
+
+        });
+    </script>
+</head>
+<body>
+<!-- Thumbnail -->
+<img class="thumbnail"
+src="https://assets.codepen.io/16425/html-css-js-logo-thumb.jpg" alt="Thumbnail">
+
+
+<!-- Fullsize -->
+<dialog>
+
+<img src="https://assets.codepen.io/16425/html-css-js-logo-fullsize.jpg" alt="Full Size Image">
+
+</dialog>
+</body>
+</html>
